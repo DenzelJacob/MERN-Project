@@ -6,7 +6,7 @@ const Menu = () => {
         <div className="links">
         <a href="/" >Home</a>
         <a href="/create" >Add New Workout</a>
-        <a href="/progress" >Progress</a>
+        <a href="/history" >Workout History</a>
         </div>
 
 
