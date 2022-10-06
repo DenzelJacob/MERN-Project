@@ -1,22 +1,36 @@
 import { useState } from "react";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 const Create = () => {
+
     const [name, setName] = useState('');
     const [sets, setSets] = useState('');
     const [reps, setReps] = useState('');
     const [weight, setweight] = useState('');
+
+    const history = useNavigate();
+    const endpoint = 'http://localhost:8000';
+    // npx json-server --watch workout-app\data\db.json --port 8000
+
     const handleSubmit = (e) =>{
         e.preventDefault()
         const exercise ={name,sets,reps,weight};
 
-        //fetch(){}
+        fetch(endpoint, {
+            method:'POST',
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify(exercise)
+        }).then(()=>{
+            history('/');
+        }) 
+        
         console.log(exercise);
+        }
+        
 
 
 
-    }
     
-
+    
 
     return (  
             <div>
