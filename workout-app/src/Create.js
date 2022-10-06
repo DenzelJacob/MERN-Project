@@ -8,7 +8,7 @@ const Create = () => {
     const [weight, setweight] = useState('');
 
     const history = useNavigate();
-    const endpoint = 'http://localhost:8000';
+    const endpoint = 'http://localhost:8000/exercises';
     // npx json-server --watch workout-app\data\db.json --port 8000
 
     const handleSubmit = (e) =>{
