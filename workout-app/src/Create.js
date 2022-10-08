@@ -2,35 +2,35 @@ import { useState } from "react";
 import {useNavigate} from "react-router-dom";
 const Create = () => {
 
-    const [name, setName] = useState('');
+    const [name, setName] = useState(''); // State hooks
     const [sets, setSets] = useState('');
     const [reps, setReps] = useState('');
-    const [weight, setweight] = useState('');
+    const [weight, setWeight] = useState('');
 
     const history = useNavigate();
     const endpoint = 'http://localhost:8000/exercises';
     // npx json-server --watch workout-app\data\db.json --port 8000
 
+
     const handleSubmit = (e) =>{
         e.preventDefault()
+        
         const exercise ={name,sets,reps,weight};
 
         fetch(endpoint, {
             method:'POST',
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify(exercise)
-        }).then(()=>{
+            // add time added to body
+
+        }).then( () => { // after the fetch is done
             history('/');
         }) 
         
         console.log(exercise);
         }
         
-
-
-
-    
-    
+        
 
     return (  
             <div>
@@ -42,7 +42,7 @@ const Create = () => {
                     <label>Name of Exercise:</label>
                     <input type="text" name="name" autoComplete="off" onChange={(e) => setName(e.target.value)}></input>
                     <br/>
-                    
+                    {/* add selector for categories */}
                     <label htmlFor="sets">Sets: </label>
                     <input type="number" id="sets" placeholder="0" onChange={(e) => setSets(e.target.value)}></input>
                     <br/>
@@ -50,7 +50,7 @@ const Create = () => {
                     <input type="number" id="reps" placeholder="0" onChange={(e) => setReps(e.target.value)}></input>
                     <br/>
                     <label htmlFor="weight">Weight:</label>
-                    <input type="number" id="weight" placeholder="0" onChange={(e) => setweight(e.target.value)}></input>
+                    <input type="number" id="weight" placeholder="0" onChange={(e) => setWeight(e.target.value)}></input>
                     <br/>
 
                     <button className="submitbutton" onClick={handleSubmit}>Submit</button>

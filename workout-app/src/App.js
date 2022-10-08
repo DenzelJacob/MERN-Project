@@ -6,7 +6,7 @@ import Menu from './Menu';
 import Home from './Home';
 import Create from './Create';
 import History from './History';
-
+import NotFound from './NotFound';
 
 
 
@@ -21,6 +21,10 @@ function App() {
           <Route exact path="/" element= {<Home/>} />
           <Route path="/create" element= {<Create />} />
           <Route path="/history" element= {<History />} />
+
+
+          
+          <Route path="*" element= {<NotFound />} />
         </Routes>
 
     </Router>
