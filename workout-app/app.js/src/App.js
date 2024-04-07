@@ -9,7 +9,6 @@ import History from './History';
 import NotFound from './NotFound';
 
 
-
 function App() {
   return (
     <Router>
@@ -21,10 +20,8 @@ function App() {
           <Route exact path="/" element= {<Home/>} />
           <Route path="/create" element= {<Create />} />
           <Route path="/history" element= {<History />} />
-
-
-          
           <Route path="*" element= {<NotFound />} />
+          
         </Routes>
 
     </Router>

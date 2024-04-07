@@ -1,5 +1,8 @@
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
+
+
+
 const Create = () => {
 
     const [name, setName] = useState(''); // State hooks
@@ -11,6 +14,7 @@ const Create = () => {
     const endpoint = 'http://localhost:8000/exercises';
     // npx json-server --watch workout-app\data\db.json --port 8000
 
+    // make a rateing difficult, medium , easy
 
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -27,14 +31,14 @@ const Create = () => {
             history('/');
         }) 
         
-        console.log(exercise);
+        //console.log(exercise);
         }
         
         
 
     return (  
             <div>
-                <center>
+                <center> 
 
                     <h1>Add your new workout</h1> 
 
