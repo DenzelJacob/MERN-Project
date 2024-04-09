@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import WorkoutList from './WorkoutList';
 import AddWorkoutForm from './AddWorkoutForm';
+import Navbar from './NavigationMenu';
 
+// import react router and implement
 function App() {
   const [workouts, setWorkouts] = useState([]);
 
@@ -16,8 +18,10 @@ function App() {
 
   return (
     <div>
-      <h1>Workout App</h1>
+      <Navbar/>
+      <h1>Fitness Tracker</h1>
       <AddWorkoutForm addWorkout={addWorkout} />
+      <h2> Workouts </h2>
       <WorkoutList workouts={workouts} deleteWorkout={deleteWorkout} />
     </div>
   );
