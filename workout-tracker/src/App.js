@@ -13,6 +13,9 @@ import  {
 
 import "./css/App.css"
 import Home from './Home';
+import Navbar from './NavigationMenu';
+import Create from './Create';
+import NoPage from './History';
 
 
 // import react router and implement
@@ -22,8 +25,16 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path='/' element={<Home/>} />
-          
+
+        
+        <Route path='/' element={<Navbar/>} >
+          <Route index element={<Home/>} />
+          <Route path='create' element={<Create/>} />
+          <Route path='history' element={<Create/>} />
+          <Route path='profile' element={<Create/>} />
+          <Route path='nopage' element={<NoPage/>} />
+        </Route>
+        
 
         
 
