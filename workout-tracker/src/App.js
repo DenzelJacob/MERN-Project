@@ -1,22 +1,19 @@
 // App.js
-import React, { useState } from 'react';
 import  {
   BrowserRouter, 
   Routes,
   Route,
-  Link,
-  useRouteMatch,
 } from "react-router-dom";
-import Home from './Home';
-import Navbar from './NavigationMenu';
-import Create from './Create';
-import NoPage from './NoPageFound';
-import History from './History';
+import Home from './pages/Home.js';
+import Navbar from './NavigationMenu.js';
+import Create from './pages/Create.js';
+import NoPage from './pages/NoPageFound.js';
+import History from './pages/History.js';
+import Profile from './pages/Profile';
+
 
 
 import "./css/App.css"
-import Profile from './Profile';
-
 
 
 // import react router and implement

@@ -16,8 +16,6 @@ const Navbar = () => {
             <Link to="/history"><button class="menuButton" type="button" value={"test1"}>History</button></Link>
             <Link to="/profile"><button class="menuButton" type="button" value={"test1"}>Profile</button></Link>
             
-            
-            <Link to="/nopage"><button class="menuButton" type="button" value={"test1"}>nopage</button></Link>
         </div>
          
 
