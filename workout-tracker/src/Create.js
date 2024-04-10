@@ -25,7 +25,7 @@ function Create() {
     
     <div>
       
-      <h1>Fitness Tracker</h1>
+      <h1>Add exercise</h1>
       <AddWorkoutForm addWorkout={addWorkout} />
       <h2> Workouts </h2>
       <WorkoutList workouts={workouts} deleteWorkout={deleteWorkout} />

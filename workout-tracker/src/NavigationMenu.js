@@ -13,9 +13,10 @@ const Navbar = () => {
         <div class="Navbar">
             <Link to="/"><button class="menuButton" type="button" value={"test1"}>Home</button></Link>
             <Link to="/create"><button class="menuButton" type="button" value={"test1"}>Create</button></Link>
-         
-            <button class="menuButton" type="button" value={"test1"}>History</button>
-            <button class="menuButton" type="button" value={"test1"}>Profile</button>
+            <Link to="/history"><button class="menuButton" type="button" value={"test1"}>History</button></Link>
+            <Link to="/profile"><button class="menuButton" type="button" value={"test1"}>Profile</button></Link>
+            
+            
             <Link to="/nopage"><button class="menuButton" type="button" value={"test1"}>nopage</button></Link>
         </div>
          

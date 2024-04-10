@@ -1,5 +1,5 @@
-const NoPage = () => {
-    return <h1>404</h1>;
+const History = () => {
+    return <h1>This is History page</h1>;
   };
   
-  export default NoPage;
+  export default History;
