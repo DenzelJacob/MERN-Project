@@ -38,7 +38,7 @@ function AddWorkoutForm({ addWorkout }) {
         value={duration}
         onChange={(e) => setDuration(e.target.value)}
         />
-
+        
         <button type="submit">Add Workout</button>
 
     </form>

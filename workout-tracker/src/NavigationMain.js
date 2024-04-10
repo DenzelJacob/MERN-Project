@@ -1,40 +1,31 @@
-// App.js
 import  {
   BrowserRouter, 
   Routes,
   Route,
 } from "react-router-dom";
-import Home from './pages/Home.js';
 import Navbar from './NavigationMenu.js';
+import Home from './pages/Home.js';
 import Create from './pages/Create.js';
 import NoPage from './pages/NoPageFound.js';
 import History from './pages/History.js';
-import Profile from './pages/Profile';
+import Profile from './pages/Profile.js';
 
-
-
-import "./css/App.css"
-
-
-// import react router and implement
-function App() {
+function NavigationRouter() {
 
   return (
     <BrowserRouter>
+
       <Routes>
-
-
         
         <Route path='/' element={<Navbar/>} >
+
           <Route index element={<Home/>} />
           <Route path='create' element={<Create/>} />
           <Route path='history' element={<History/>} />
           <Route path='profile' element={<Profile/>} />
           <Route path='nopage' element={<NoPage/>} />
-        </Route>
-        
 
-        
+        </Route>
 
       </Routes>
 
@@ -43,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default NavigationRouter;

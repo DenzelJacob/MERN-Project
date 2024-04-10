@@ -1,8 +1,7 @@
-// App.js
 import React, { useState } from 'react';
-import WorkoutList from '../WorkoutList';
-import AddWorkoutForm from '../AddWorkoutForm';
-import "../css/App.css"
+import WorkoutList from '../scripts/WorkoutList.js';
+import AddWorkoutForm from '../scripts/AddWorkoutForm.js';
+
 
 
 // import react router and implement

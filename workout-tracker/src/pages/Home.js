@@ -1,9 +1,3 @@
-
-
-import "../css/App.css"
-
-
-
 function Home() {
 
   return (

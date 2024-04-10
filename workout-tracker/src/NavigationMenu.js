@@ -1,10 +1,6 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import'./css/NavigationMenu.css';
-// make css for nav bar
-// make the on clicks for the navbar buttons
-
-
 
 const Navbar = () => {
     return (
@@ -17,7 +13,6 @@ const Navbar = () => {
             <Link to="/profile"><button class="menuButton" type="button" value={"test1"}>Profile</button></Link>
             
         </div>
-         
 
          <Outlet/>
 
