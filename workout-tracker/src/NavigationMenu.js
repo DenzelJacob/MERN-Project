@@ -1,5 +1,6 @@
 import React from "react";
 
+import'./css/NavigationMenu.css';
 // make css for nav bar
 // make the on clicks for the navbar buttons
 
@@ -7,13 +8,13 @@ import React from "react";
 
 const Navbar = () => {
     return (
-    <div>
-        <h1>Navbar temp</h1>
-         <button type="button" value={"test1"}>Home</button>
-         <button type="button" value={"test1"}>Create</button>
-         <button type="button" value={"test1"}>History</button>
-         <button type="button" value={"test1"}>Profile</button>
-         <h1>_____________________________ </h1> 
+    <div class="Navbar">
+        
+         <button class="menuButton" type="button" value={"test1"}>Home</button>
+         <button class="menuButton" type="button" value={"test1"}>Create</button>
+         <button class="menuButton" type="button" value={"test1"}>History</button>
+         <button class="menuButton" type="button" value={"test1"}>Profile</button>
+         
     </div>
     )
 }
