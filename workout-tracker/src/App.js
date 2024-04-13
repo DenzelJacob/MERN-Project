@@ -1,9 +1,5 @@
-import  {
-  BrowserRouter, 
-  Routes,
-  Route,
-} from "react-router-dom";
-import Navbar from './NavigationMenu.js';
+import  { Routes,Route} from "react-router-dom";
+import Navbar from './components/NavigationMenu.js';
 import Home from './pages/Home.js';
 import Create from './pages/Create.js';
 import NoPage from './pages/NoPageFound.js';
@@ -13,7 +9,7 @@ import Profile from './pages/Profile.js';
 function NavigationRouter() {
 
   return (
-    <BrowserRouter>
+    
 
       <Routes>
         
@@ -23,13 +19,13 @@ function NavigationRouter() {
           <Route path='create' element={<Create/>} />
           <Route path='history' element={<History/>} />
           <Route path='profile' element={<Profile/>} />
-          <Route path='nopage' element={<NoPage/>} />
+          <Route path='*' element={<NoPage/>} />
 
         </Route>
 
       </Routes>
 
-    </BrowserRouter>
+    
   
   );
 }

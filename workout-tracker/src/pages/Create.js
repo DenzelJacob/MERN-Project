@@ -16,6 +16,13 @@ function Create() {
     setWorkouts(workouts.filter((workout) => workout.id !== id));
   };
 // make exercise template make -- TODO 
+/*
+start workout ID - today
+add exercise to current workout
+add set to current exercise
+set will have set # weight, reps, rest
+
+*/
 //make workout template maker  -- TODO
   return (
    
