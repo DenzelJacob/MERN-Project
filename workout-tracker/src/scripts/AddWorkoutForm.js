@@ -34,11 +34,12 @@ function AddWorkoutForm({ addWorkout }) {
         <input
         type="number"
         placeholder="Rest (seconds)"
+        step={10}
         //default to 60  or 120 secs
         value={duration}
         onChange={(e) => setDuration(e.target.value)}
         />
-
+        
         <button type="submit">Add Workout</button>
 
     </form>

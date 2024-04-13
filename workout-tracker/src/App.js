@@ -1,30 +1,33 @@
-// App.js
-import React, { useState } from 'react';
-import WorkoutList from './WorkoutList';
-import AddWorkoutForm from './AddWorkoutForm';
-import Navbar from './NavigationMenu';
+import  { Routes,Route} from "react-router-dom";
+import Navbar from './components/NavigationMenu.js';
+import Home from './pages/Home.js';
+import Create from './pages/Create.js';
+import NoPage from './pages/NoPageFound.js';
+import History from './pages/History.js';
+import Profile from './pages/Profile.js';
 
-// import react router and implement
-function App() {
-  const [workouts, setWorkouts] = useState([]);
-
-  const addWorkout = (workout) => {
-    setWorkouts([...workouts, workout]);
-  };
-
-  const deleteWorkout = (id) => {
-    setWorkouts(workouts.filter((workout) => workout.id !== id));
-  };
+function NavigationRouter() {
 
   return (
-    <div>
-      <Navbar/>
-      <h1>Fitness Tracker</h1>
-      <AddWorkoutForm addWorkout={addWorkout} />
-      <h2> Workouts </h2>
-      <WorkoutList workouts={workouts} deleteWorkout={deleteWorkout} />
-    </div>
+    
+
+      <Routes>
+        
+        <Route path='/' element={<Navbar/>} >
+
+          <Route index element={<Home/>} />
+          <Route path='create' element={<Create/>} />
+          <Route path='history' element={<History/>} />
+          <Route path='profile' element={<Profile/>} />
+          <Route path='*' element={<NoPage/>} />
+
+        </Route>
+
+      </Routes>
+
+    
+  
   );
 }
 
-export default App;
+export default NavigationRouter;

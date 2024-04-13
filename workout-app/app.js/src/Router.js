@@ -9,7 +9,7 @@ import History from './History';
 import NotFound from './NotFound';
 
 
-function App() {
+function RouterMain() {
   return (
     <Router>
 
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default RouterMain;
